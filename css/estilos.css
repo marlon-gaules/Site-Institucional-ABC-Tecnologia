@@ -1,0 +1,83 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(235,235,216);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    background-color: black;
+    color: white;
+    margin: 0px;
+    padding-left: 12px;
+}
+
+.container { margin: 80px 50px; }
+
+.ajuste-container { padding-top: 50px; }
+
+.intro {
+    background-image: url(../imagens/mesa-de-trabalho.jpg);
+    padding: 220px 0px;
+    margin-top: 40px;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+footer {
+    background-image: url(../imagens/tela-com-codigos.jpg);
+    color: white;
+    height: 100px;
+    text-align: center;
+    
+    /* Tornando o elemento FLEX, podemos fazer alinhamento vertical */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    font-weight: bold;
+    text-shadow: black 1px 1px 2px;
+    background-color: black;
+    width: 100%;
+}
+
+.borda {
+    box-shadow: black 3px 3px 10px;
+    padding: 30px;
+    background-color: white;
+}
+
+
+/* CSS para produtos.html */
+.treinamentos section {
+    background-color: white;
+    width: 30%;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.treinamentos {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flutuar-esquerda {
+    float: left;
+    width: 150px;
+    margin-right: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    .treinamentos { flex-direction:  column;}
+    .treinamentos section {
+        width: 100%;
+        margin: 5px 0;
+    }
+}

@@ -1,0 +1,65 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    /* Trata da ordem de empilhamento de elementos
+    que usam position, faz algo ficar em front ao outro */
+    z-index: 100;
+}
+
+.menu {
+    list-style: none;
+    /* zerar espaçamento */
+    margin: 0; 
+    /* zerar espaçamento */
+    padding: 0;
+    background-color: #003264;
+    overflow: hidden;
+}
+.menu li { float: left; }
+
+.menu li a {
+    text-decoration: none;
+    display: block;
+    color: white;
+    padding: 14px 16px;
+}
+
+.menu li a:hover, .menu li a:focus {
+    background-color: whitesmoke;
+    color: darkblue;
+}
+
+/* iniciar com o ícone do menu escondido */
+.menu li.icone { display: none; }
+
+/* Regra especial (Media Query) para telas de no máximo
+760px de largura */
+@media screen and (max-width: 760px) {
+    /* Escondemos todos os li */	
+    .menu li { display: none; }
+
+    /* Mas deixamos visível apenas o li do ícone */
+    .menu li.icone {
+        display: block;
+        float: right;
+    }
+
+    /* Importante para os ajustes de coordenadas do ícone */
+    .menu.responsivo { position: relative; }
+
+    /* Ajustamos as coordenadas do ícone */
+    .menu.responsivo li.icone {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    /* Removemos o float e fazemos os li ficar na horizontal */
+    .menu.responsivo li {
+        float: none;
+        display: inline;
+    }
+}

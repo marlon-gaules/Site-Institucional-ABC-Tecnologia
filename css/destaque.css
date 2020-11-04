@@ -1,0 +1,63 @@
+.registro {
+    /* background-color: yellow; */
+    position: absolute;
+    top: 400px;
+    right: 50px;
+    width: 160px;
+    height: 160px;
+    padding-top: 60px;
+    opacity: .9;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-shadow: black 0 1px 0;
+    color: white;
+    border-radius: 100%;
+    background-image: linear-gradient(to top, darkred, red);
+    transform: rotateZ(5deg);
+    transition: transform 1s;
+}
+
+.registro:hover, .registro:focus {
+    background-image: linear-gradient(to top, darkblue, blue);
+    transform: rotateZ(15s);
+}
+
+.hoje { font-size: 14px; }
+
+.hoje::before { content: "👹"; }
+.hoje::after { content: "👻"; }
+
+/* Mini-exercícios:
+Criar uma regra especial para telas de até no máximo
+740px de largura em que:
+
+1) a classe .registro seja modificada para:
+-largura: 100px
+-algura: 100px
+-tamanho da fonte: 12px
+-espaçamento interno superior: 37px 
+
+2) a classe .hoje seja modificada para:
+-tamanho da fonte: 10px
+-cor do texto: amarelo (ou qualquer outra) 
+-negrito */
+
+@media screen and (max-width: 740px) {
+    .registro {
+        width: 100px;
+        height: 100px;
+        font-size: 12px;
+        padding-top: 37px;
+    }
+
+    .hoje {
+        font-size: 10px;
+        color:  yellow;
+        font-weight: bold;
+    }
+}
+/* 
+@media screen and (min-width: 500px) and (max-width: 550px) {
+    h1 { color: yellow; }
+} */
